@@ -6,46 +6,30 @@
     <description>Auto-update feed for Voiceprint</description>
     <language>en</language>
     <item>
-      <title>Version 0.2.1</title>
-      <pubDate>Sun, 01 Jun 2026 14:15:00 +0300</pubDate>
-      <sparkle:version>3</sparkle:version>
-      <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
+      <title>Version 0.2.2</title>
+      <pubDate>Sun, 01 Jun 2026 20:25:00 +0300</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <h2>v0.2.1 — Sparkle upgrade smoke test</h2>
+        <h2>v0.2.2 — first fully-working release</h2>
         <ul>
-          <li>Trivial version bump to verify the end-to-end auto-update flow from v0.2.0.</li>
-          <li>Identical functionality to v0.2.0 otherwise.</li>
+          <li><strong>Menubar buttons now respond to clicks.</strong> v0.2.0 and v0.2.1 had a broken responder chain caused by Sparkle's auto-check window opening at launch; this release fixes it by deferring Sparkle's startup until user-triggered check.</li>
+          <li>Menubar style switched from <code>.menu</code> to <code>.window</code> popover for reliable action dispatch on macOS Tahoe 26.</li>
+          <li>Default server port: 5055 (was 8765, which collided with the brain store http.server).</li>
+          <li><code>--port</code> and <code>--no-open</code> properly passed to the Python subprocess.</li>
+          <li>Server-error surfacing in the menubar (subprocess stderr is now visible on failure).</li>
+          <li><strong>Build pipeline hardening</strong>: build script now fails loudly on Swift compile errors instead of silently shipping the previous cached binary (this was masking ~1 hour of debugging on 2026-06-01).</li>
+          <li>Sparkle 2.x API: <code>updater.start()</code> (was incorrectly <code>startUpdater()</code>).</li>
         </ul>
+        <p>If you're on v0.2.0 or v0.2.1 and your menubar doesn't respond, redownload from <a href="https://studious-memory-2q3me3q.pages.github.io/internal-tools/voiceprint/">the landing page</a>.</p>
       ]]></description>
       <enclosure
-        url="https://shirresh.github.io/voiceprint-releases/Voiceprint-0.2.1.dmg"
-        sparkle:version="3"
-        sparkle:shortVersionString="0.2.1"
-        sparkle:edSignature="ixhlaYmij6ob0x4oAevC7wxy7n5z04GVkZXqzrA6C7v+bqr0zOB6l5r4g4VcqHX6U1vW70byGb454kot4lieBQ=="
-        length="1263889"
-        type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Version 0.2.0</title>
-      <pubDate>Sun, 01 Jun 2026 14:05:00 +0300</pubDate>
-      <sparkle:version>2</sparkle:version>
-      <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[
-        <h2>v0.2.0 — first Sparkle-enabled release</h2>
-        <ul>
-          <li>Auto-update via Sparkle (this is the first build that can pull future updates automatically).</li>
-          <li>In-app feedback form wired to a private GitHub issue tracker.</li>
-          <li>Doctor + menubar wiring fixes from v0.1.0 supervisor pass.</li>
-        </ul>
-      ]]></description>
-      <enclosure
-        url="https://shirresh.github.io/voiceprint-releases/Voiceprint-0.2.0.dmg"
-        sparkle:version="2"
-        sparkle:shortVersionString="0.2.0"
-        sparkle:edSignature="8dTyd83wWe++uumQ1wawO3s5CZVNTjzhI19TqA5RsrrJKdoVSfuFWCj29k28Ui+qBzbBa8bwf/sUZ8hxF4WrCQ=="
-        length="1263825"
+        url="https://shirresh.github.io/voiceprint-releases/Voiceprint-0.2.2.dmg"
+        sparkle:version="4"
+        sparkle:shortVersionString="0.2.2"
+        sparkle:edSignature="uGqNexjpze9cNi9Sy6BhOLjjZyG+IRllbeGSxpl89BWbvJjzKz19zKdaBniTPBdGtyoY/qIyDAAkjco7eVpICQ=="
+        length="1264848"
         type="application/octet-stream" />
     </item>
   </channel>
