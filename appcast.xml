@@ -6,6 +6,30 @@
     <description>Auto-update feed for Voiceprint</description>
     <language>en</language>
     <item>
+      <title>Version 0.3.2</title>
+      <pubDate>Tue, 03 Jun 2026 06:10:00 +0300</pubDate>
+      <sparkle:version>8</sparkle:version>
+      <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h2>v0.3.2 — Jamie import is now a meeting picker</h2>
+        <p>v0.3.1's "Import Jamie meeting…" sheet asked for a meeting ID. Turns out Jamie doesn't surface IDs anywhere in the web UI, so manual entry was a UX dead-end. Fixed:</p>
+        <ul>
+          <li>Sheet now opens with your <strong>25 most recent Jamie meetings</strong> (title + date + duration).</li>
+          <li><strong>Search field at the top</strong> — type any part of a title to filter. Debounced; uses Jamie's full-content search API so transcripts match too.</li>
+          <li><strong>One-click on a row</strong> imports that meeting.</li>
+        </ul>
+        <p>Key flow unchanged: paste your Jamie API key once, stored in macOS keychain. Once stored, the sheet jumps straight to the meeting list on open.</p>
+      ]]></description>
+      <enclosure
+        url="https://shirresh.github.io/voiceprint-releases/Voiceprint-0.3.2.dmg"
+        sparkle:version="8"
+        sparkle:shortVersionString="0.3.2"
+        sparkle:edSignature="2Q8c2wPnSetz0ztZBoO5ZB7XfEGlkoo4NrMO1AMoL/zHHQrO8kelwEHB3plky33Fl7zpNmepEwtguVeqQKVIAw=="
+        length="1569132"
+        type="application/octet-stream" />
+    </item>
+    <item>
       <title>Version 0.3.1</title>
       <pubDate>Tue, 03 Jun 2026 03:03:00 +0300</pubDate>
       <sparkle:version>7</sparkle:version>
